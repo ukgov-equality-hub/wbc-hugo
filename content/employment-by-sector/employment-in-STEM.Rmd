@@ -1,0 +1,72 @@
+---
+output: md_document
+---
+| \-\-\-
+| title: Employment in STEM
+| date: 2021-01-01
+| type: post
+| weight: 300
+| summary: "Female employment in STEM (%)"
+| \-\-\-
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+# Libraries
+library(kableExtra)
+
+```
+
+```{r include=FALSE}
+# Create dataframe
+df_employment <- read.csv("../../CSVs/employment_rates_test1.csv")
+
+```
+
+# Employment rates 3
+
+````{verbatim}
+{{< details "More information" >}}
+The details component allows you to hide more detailed information 
+that might be relevant to only some users.
+{{< /details >}}
+````
+
+
+```{escape=FALSE}
+{{< details "More information" >}}
+The details component allows you to hide more detailed information 
+that might be relevant to only some users.
+{{< /details >}}
+```
+
+
+| {{\< details "More information" \>}}
+| The details component allows you to hide more detailed information 
+| that might be relevant to only some users.
+| {{< /details >}}
+
+| {{< tabset >}}
+| {{< tab title="First Tab" >}}
+| My first tab
+| {{< /tab >}}
+| {{< tab title="Tab 2" >}}
+| My second tab
+| {{< /tab >}}
+| {{< tab title="Third" >}}
+| My third tab
+| {{< /tab >}}
+| {{< /tabset >}}
+
+## The female employment rate was 72.1% in May 2023
+
+Female and male employment rates in the UK (aged 16 to 64, seasonally adjusted)
+
+## Employment rates, January 2020 to May 2023
+
+```{r echo=FALSE}
+knitr::kable(read.csv("../../CSVs/employment_rates_test1.csv"),)
+```
