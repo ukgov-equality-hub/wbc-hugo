@@ -3,3 +3,7 @@ Thumbs.db
 
 .Rproj.user/*
 .Rproj.user
+
+.idea/
+.hugo_build.lock
+.Rhistory
